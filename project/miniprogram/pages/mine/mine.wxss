@@ -1,0 +1,131 @@
+.content {
+    width: 750rpx;
+}
+
+.top {
+    width: 100%;
+    height: 300rpx;
+    position: relative;
+}
+
+.bg {
+    width: 100%;
+    height: 300rpx;
+}
+
+.user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userImg {
+    width: 100rpx;
+    height: 100rpx;
+    text-align: center;
+}
+
+.loginImg {
+    border-radius: 50%;
+    width: 100rpx;
+    height: 100rpx;
+    text-align: center;
+}
+
+.loginBtn {
+    border: 1rpx solid #fff;
+    color: #fff;
+    border-radius: 20rpx;
+    background-color: #F56139;
+}
+
+.loginTitle {
+    color: #fff;
+}
+
+.center {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mineItem {
+    width: 33%;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.active {
+    border-bottom: 5rpx solid red;
+}
+
+.bottom {
+    text-align: center;
+    margin-top: 40rpx;
+}
+
+.bottom .noLogin {
+    width: 400rpx;
+    height: 400rpx;
+}
+
+.noLoginText {
+    color: #ccc;
+}
+
+.menuList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menuListItem {
+    margin-top: 20rpx;
+    width: 45%;
+    height: 340rpx;
+    border-radius: 20rpx;
+    border: 3rpx solid #ccc;
+    overflow: hidden;
+}
+
+.followListItem {
+    margin-top: 20rpx;
+    width: 46%;
+    height: 340rpx;
+    border-radius: 20rpx;
+    border: 3rpx solid #ccc;
+    overflow: hidden;
+}
+
+.itemImg {
+    width: 100%;
+    height: 250rpx;
+}
+
+.itemTitle {
+    text-align: center;
+    height: 40rpx;
+    width: 100%;
+}
+
+.addMenu {
+    margin-top: 20rpx;
+    border: 3rpx solid #ccc;
+    width: 40%;
+    height: 300rpx;
+    padding: 20rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    border-radius: 20rpx;
+}
+
+.addMenuImg {
+    display: block;
+    width: 200rpx;
+    height: 200rpx;
+    margin: 40rpx auto;
+}

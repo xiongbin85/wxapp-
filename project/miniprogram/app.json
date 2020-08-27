@@ -1,0 +1,44 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/search/search",
+        "pages/mine/mine",
+        "pages/addMenu/addMenu",
+        "pages/addMenuType/addMenuType",
+        "pages/menuDetail/menuDetail",
+        "pages/menuTypeList/menuTypeList",
+        "pages/typeDetail/typeDetail",
+        "pages/searchDetail/searchDetail"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6623A",
+        "navigationBarTitleText": "云菜谱平台",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+      "color": "#000000",
+      "selectedColor": "#ff0000",
+      "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabbar/home.png",
+        "selectedIconPath": "images/tabbar/homeSel.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/tabbar/search.png",
+        "selectedIconPath": "images/tabbar/searchSel.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/tabbar/mine.png",
+        "selectedIconPath": "images/tabbar/mineSel.png"
+      }]
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

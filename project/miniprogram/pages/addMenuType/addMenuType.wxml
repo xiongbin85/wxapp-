@@ -1,0 +1,28 @@
+<view>
+	<view class="typeList">
+		<!-- 菜谱分类列表 -->
+		<view class="typeItem" wx:for="{{typeList}}" wx:key="_id">
+			<text class="typeTitle">{{item.typeName}}</text>
+			<button size="mini" type="warn" class="delType" bindtap="delMenuType" id="{{item._id}}" data-index="{{index}}">删除</button>
+			<button size="mini" type="primary" class="updateType" bindtap="showUpdateMenuType" id="{{item._id}}" data-index="{{index}}">修改</button>
+		</view>
+		<!-- 添加按钮 -->
+		<view class="addType" bindtap="showAddMenuType">
+			<image src="/images/mine/add.png" mode="aspectFit"></image>
+		</view>
+	</view>
+	<!-- 添加 -->
+	<view class="update" wx:if="{{addMenuType}}">
+		<form bindsubmit="addMenuType">
+			<input class="inp" name="typeName" placeholder="输入菜谱分类名称"></input>
+			<button class="submitBtn" size="mini" form-type="submit">添加</button>
+		</form>
+	</view>
+	<!-- 修改 -->
+	<view class="update" wx:if="{{updateMenuType}}">
+		<form bindsubmit="updateMenuType">
+			<input class="inp" name="typeName" placeholder="输入菜谱分类名称"></input>
+			<button class="submitBtn" size="mini" form-type="submit">修改</button>
+		</form>
+	</view>
+</view>

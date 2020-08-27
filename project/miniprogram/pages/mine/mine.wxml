@@ -1,0 +1,55 @@
+<view class="content">
+	<view class="top">
+		<image src="/images/mine/background.jpg" class="bg"></image>
+		<!-- 未登录 -->
+		<view class="user" wx:if="{{!isLogin}}">
+			<image src="/images/mine/user.png" class="userImg"></image>
+			<view>
+				<button class="loginBtn" size="mini" open-type="getUserInfo" bindgetuserinfo="login">登录</button>
+			</view>
+		</view>
+		<!-- 已登录 -->
+		<view class="user" wx:else>
+			<image src="{{userInfo.avatarUrl}}" class="loginImg" bindtap="addMenuType"></image>
+			<view class="loginTitle">
+				欢迎：{{userInfo.nickName}}
+			</view>
+		</view>
+	</view>
+	<view class="center">
+		<view class="mineItem {{activeId==index?'active':''}}" wx:for="{{list}}" wx:key="*this" bindtap="switch" id="{{index}}">{{item}}</view>
+	</view>
+	<!-- 未登录 -->
+	<view class="bottom" wx:if="{{!isLogin}}">
+		<image class="noLogin" src="/images/mine/tips1.png" mode="aspectFit"></image>
+		<view class="noLoginText">可以先去登录哦</view>
+	</view>
+	<!-- 已登陆 -->
+	<view wx:else>
+		<!-- 菜谱 -->
+		<view wx:if="{{activeId==0}}" class="menuList">
+				<mp-slideview buttons="{{[{type: 'warn',text: '删除',extClass: 'test'}]}}" bindbuttontap="delMenu" id="{{item._id}}" data-index="{{index}}" wx:for="{{menuList}}" wx:key="_id" class="menuListItem">
+					<view bindtap="menuDetail" id="{{item._id}}">
+						<image class="itemImg" mode="aspectFill" src="{{item.fileIds[0]}}"></image>
+						<view class="itemTitle">{{item.menuName}}</view>
+					</view>
+				</mp-slideview>
+				<view class="addMenu" bindtap="addMenu">
+					<image src="/images/mine/add.png" mode="aspectFit" class="addMenuImg"></image>
+				</view>
+		</view>
+		<!-- 分类 -->
+		<mp-cells wx:if="{{activeId==1}}">
+			<mp-slideview buttons="{{[{type: 'warn',text: '查看',extClass: 'test'}]}}" bindbuttontap="slideButtonTap" id="{{item._id}}" wx:for="{{menuType}}" wx:key="_id" wx:if="{{menuType.length>0}}">
+				<mp-cell footer="左滑more" title="{{item.typeName}}" />
+			</mp-slideview>
+		</mp-cells>
+		<!-- 关注 -->
+		<view wx:if="{{activeId==2}}" class="menuList">
+			<view class="followListItem" wx:for="{{followList}}" wx:key="_id" wx:if="{{followList.length>0}}">
+				<image class="itemImg" mode="aspectFill" src="{{item.fileIds[0]}}"></image>
+				<view class="itemTitle">{{item.menuName}}</view>
+			</view>
+		</view>
+	</view>
+</view>

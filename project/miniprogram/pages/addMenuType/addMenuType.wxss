@@ -1,0 +1,50 @@
+.typeList{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.typeItem{
+    margin-top: 20rpx;
+    width: 48%;
+    height: 120rpx;
+    display: flex;
+    border: 1rpx solid #ccc;
+    align-items: center;
+}
+.typeItem .typeTitle{
+    text-align: center;
+    width: 120rpx;
+    height: 50rpx;
+    font-size: 26rpx;
+    line-height: 50rpx;
+}
+.addType{
+    width: 48%;
+    border: 1rpx solid #ccc;
+    margin-top: 20rpx;
+    height: 120rpx;
+}
+.addType image{
+    display: block;
+    width: 100rpx;
+    height: 100rpx;
+    margin: 5rpx auto;
+}
+.inp{
+    display: inline-block;
+    border: 1rpx solid #ccc;
+    width: 80%;
+}
+.update{
+    padding-left: 20rpx;
+    margin-top: 50rpx;
+    display: flex;
+    height: 50rpx;
+    justify-content: space-between;
+}
+form{
+    width: 100%;
+}
+.submitBtn{
+    display: inline-block;
+}

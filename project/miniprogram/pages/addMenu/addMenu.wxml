@@ -1,0 +1,21 @@
+<form bindsubmit="submit">
+	<view>
+		<label>菜单名称</label>
+		<input type="text" name="menuName" placeholder="请输入菜单名称"></input>
+	</view>
+	<view>
+		<label>菜谱分类</label>
+		<radio-group name="menuCate">
+			<radio wx:for="{{typeList}}" wx:key="_id" value="{{item._id}}">{{item.typeName}}</radio>
+		</radio-group>
+	</view>
+	<view>
+		<label>菜谱图片</label>
+		<mp-uploader files="{{files}}" max-count="5" title="图片上传" bindselect="chooseImg"></mp-uploader>
+	</view>
+	<view>
+		<label>菜品做法</label>
+		<textarea name="cookStep" maxlength="-1" placeholder="请输入菜品做法"></textarea>
+	</view>
+	<button type="primary" form-type="submit">发布</button>
+</form>
